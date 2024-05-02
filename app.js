@@ -50,5 +50,5 @@ app.use('/notes', noteRoute)
 
 // Listen
 app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
+    console.log(`Server is running on ${PORT}`);
 });

@@ -7,8 +7,6 @@ const jwt = require("jsonwebtoken");
 
 const JWT_SECURE = process.env.JWT_SECURE
 
-// const JWT_SECURE = "Daksh@dkGhole";
-
 let success = false;
 
 async function signupUser(req, res) {
