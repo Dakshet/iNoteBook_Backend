@@ -3,7 +3,7 @@ const express = require("express");
 
 const app = express();
 const PORT = process.env.PORT;
-
+const FRONTEND_URL = process.env.FRONTEND_URL;
 
 
 // Import
@@ -26,11 +26,15 @@ handleToDB(process.env.MONGODB_URL).then(() => {
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }))
 
+const corsOptions = {
+    origin: FRONTEND_URL
+};
+
 
 
 
 // Cors
-app.use(cors())
+app.use(cors(corsOptions));
 
 
 // Routes
