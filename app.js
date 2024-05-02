@@ -30,11 +30,7 @@ app.use(express.urlencoded({ extended: false }))
 
 
 // Cors
-app.use(cors({
-    origin: [process.env.FRONTEND_URL],
-    method: ["POST"],
-    credentials: true,
-}))
+app.use(cors())
 
 
 // Routes
